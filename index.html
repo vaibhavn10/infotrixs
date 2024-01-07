@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="/navbar.css" type="text/css">
+    <link rel="stylesheet" href="/dashboard.css" type="text/css">
+</head>
+
+<body>
+    <nav class="fullnavbar">
+        <div class="container">
+            <div class="nav navbar">
+                <div class="nav">
+                    <div class="logo">AccuWeather</div>
+                </div>
+                <div class="nav">
+                    <input type="text" id="location" class="city" value="" placeholder="Enter City/State/Country..."
+                    onChange=>
+                    <button type="button" class="btn" onClick=getTemp()>Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="container alltabs">
+            <div class="tabs">
+                <a href="/">TODAY</a>
+                <a href="/">HOURLY</a>
+                <a href="/">DAILY</a>
+                <a href="/">RADAR</a>
+                <a href="/">MINUTECAST</a>
+                <a href="/">MONTHLY</a>
+                <a href="/">AIR QUALITY</a>
+                <a href="/">HEALTH&ACTIVITIES</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="weatherbox">
+            <div class="flex flex-col weatherdetails">
+                    <div class="flex flex-col" style="row-gap: 20px; justify-content: center; align-items: center;">
+                        <div class="flex flex-col" style="row-gap: 5px; align-items: center;">
+                            <div class="time" id="time"></div>
+                            <div class="flex temp">
+                                <div id="navtemp">
+                                    Pune, Maharashtra 23&deg;c
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col" style="align-items: center; row-gap: 20px;">
+                            <div class="flex flex-col">
+                                <div id="temperature">23&deg;c</div>
+                            </div>
+                            <div class="">
+                                <img src="https://media.istockphoto.com/id/1334613123/vector/moon-and-star-black-icon-of-moon-for-night-pictogram-of-crescent-and-star-logo-for-sleep-and.jpg?s=612x612&w=0&k=20&c=Gy6DGTiwY2lsGPXRr2f7kqPELZEUtG1MsSEce1BkPdo="
+                                id="timeimg"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="weather">
+                    <button class="moredetails" onClick=getmoredetails()>More Details</button>
+                    <div class="flex flex-row details" id="details">
+                        <div class="flex flex-col details-tab">
+                            <div class="stats">AIR QUALITY</div>
+                            <div id="airquality" class="statsdet">HEALTHY</div>
+                        </div>
+                        <div class="flex flex-col details-tab">
+                            <div class="stats">HUMIDITY</div>
+                            <div id="humidity" class="statsdet"> 41%</div>                            
+                        </div>
+                        <div class="flex flex-col details-tab">
+                            <div class="stats">WIND</div>
+                            <div id="wind" class="statsdet">10.4km/h</div>
+                        </div>
+                        <div class="flex flex-col details-tab">
+                            <div class="stats">WIND GUSTS</div>
+                            <div id="gusts" class="statsdet"> 11.1km/h</div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="" style="padding: 0px 5vw;">
+            <div class="forecastdet">
+                <div class="flex flex-col forecast">
+                    <div class="stats">TODAY's WEATHER FORECAST</div>
+                    <div class="flex flex-row" style="column-gap: 10px; align-items: center; justify-content: space-evenly;">
+                        <div class="forecastTemp">32&deg;c</div>
+                        <div class="forecastStat">Healthy</div>
+                    </div>                            
+                </div>
+                <div class="flex flex-col forecast">
+                    <div class="stats">TOMMOROW's WEATHER FORECAST</div>
+                    <div class="flex flex-row" style="column-gap: 10px; align-items: center; justify-content: space-evenly;">
+                        <div class="forecastTemp">31&deg;c</div>
+                        <div class="forecastStat">Hazy sun</div>
+                    </div>                            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial Narrow, monospace;
+    background-color: white;
+}
+.fullnavbar{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar{
+    height: 64px;
+    padding: 1vh 0px;
+    row-gap: 1vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: Arial,Helvetica,sans-serif;
+}
+.container{
+    padding: 0px 5vw;
+}
+.nav{
+    display: flex;
+    padding: 0.5vh 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    column-gap: 2vw;
+    row-gap: 1vh;
+}
+.logo{
+    font-size: x-large;
+    font-weight: 900;
+    padding: 0px 10px;
+    text-shadow: -3px 5px 5px rgba(53, 57, 69, 0.4);
+    background: -webkit-linear-gradient(170deg,transparent , rgb(93, 179, 255) 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.logo:hover{
+    transform: scale(1.05);
+}
+.temp{
+    padding: 0px 10px;
+}
+
+.city{
+    padding: 5px 10px;
+    outline: none;    
+    border: unset;
+    font-size: 16px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgb(126, 219, 255);
+}
+.btn{
+    background-color: aliceblue;
+    border: 1px solid rgb(164, 226, 255);
+    vertical-align: middle;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    border: 1px solid rgb(135, 199, 255);
+    background-color: rgb(221, 239, 255);
+    color: rgb(0, 72, 135);
+}
+
+.alltabs{
+    border: 1px solid rgb(207, 233, 255);
+    box-shadow: 0px 0px 10px 1px rgb(232, 244, 255);
+    background-color: rgba(240, 248, 255, 0.733);
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: unset;
+}
+.tabs a{
+    color: #363636;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 1.5vw;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.tabs a:hover{
+    background-color: rgb(213, 235, 255);
+    color: rgb(0, 106, 198);
+}
+.active{
+    border-bottom: 1px solid darkred;
+}
+#navtemp{
+    text-align: center;
+    color: rgb(78, 205, 255);
+    text-shadow: -2px 1px 2px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+#navtemp:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width:600px) {
+    .navbar{
+        height: max-content;
+        padding: 15px 0px 10px 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .tabs{
+        justify-content: start;
+        overflow-x: scroll;
+        scrollbar-width: 0px;
+    }
+    .tabs a{
+        padding: 12px 2vw;        
+    }
+}
+
+.flex{
+    display: flex;
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-col{
+    flex-direction: column;
+}
